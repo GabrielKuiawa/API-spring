@@ -45,7 +45,7 @@ public class Clientes {
 
     @Transactional(readOnly = true)
     public List<Cliente> buscarPorNome(String nome) {
-        String jpql = "select c from Cliente c where c.nome like = :nome";
+        String jpql = "select c from Cliente c where c.nome like :nome";
         TypedQuery<Cliente> query = entityManager.createQuery(jpql,Cliente.class);
         query.setParameter("nome", "%" + nome + "%");
         return query.getResultList();
