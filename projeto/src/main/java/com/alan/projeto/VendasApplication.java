@@ -12,7 +12,7 @@ import com.alan.projeto.domain.entity.Cliente;
 import com.alan.projeto.domain.repositorio.Clientes;
 
 @SpringBootApplication
-public class ProjetoApplication {
+public class VendasApplication {
 
 	@Bean
 	public CommandLineRunner init( @Autowired Clientes clientes){
@@ -52,7 +52,7 @@ public class ProjetoApplication {
 	}
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetoApplication.class, args);
+		SpringApplication.run(VendasApplication.class, args);
 	}
 
 }
