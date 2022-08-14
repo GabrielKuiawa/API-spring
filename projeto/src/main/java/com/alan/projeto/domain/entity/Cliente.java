@@ -1,10 +1,14 @@
 package com.alan.projeto.domain.entity;
 
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,9 +23,12 @@ public class Cliente {
     @Column(name = "nome")
     private String nome;
 
+    @OneToMany( mappedBy = "cliente" , fetch = FetchType.LAZY )
+    private Set<Pedido> pedidos;
+
     public Cliente() {
     }
-    
+
     public Cliente(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
@@ -45,6 +52,14 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 
     @Override

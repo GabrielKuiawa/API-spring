@@ -1,4 +1,4 @@
-package com.alan.projeto.domain.repositorio;
+package com.alan.projeto.domain.repository;
 
 import java.util.List;
 

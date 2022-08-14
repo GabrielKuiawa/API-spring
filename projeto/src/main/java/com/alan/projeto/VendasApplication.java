@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.alan.projeto.domain.entity.Cliente;
-import com.alan.projeto.domain.repositorio.Clientes;
+import com.alan.projeto.domain.repository.Clientes;
 
 @SpringBootApplication
 public class VendasApplication {
