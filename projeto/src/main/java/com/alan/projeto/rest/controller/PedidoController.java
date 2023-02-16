@@ -12,7 +12,7 @@ import com.alan.projeto.rest.dto.PedidoDTO;
 import com.alan.projeto.service.PedidoService;
 
 @RestController
-@RequestMapping("api/pedidos")
+@RequestMapping("/api/pedidos")
 public class PedidoController {
      
     private PedidoService service;
